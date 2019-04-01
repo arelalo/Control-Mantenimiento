@@ -5,8 +5,9 @@ include_once 'app/ValidadorAlta.inc.php';
 include_once 'app/Tarea.inc.php';
 include_once 'app/ControlSesion.inc.php';
 include_once 'app/Redireccion.inc.php';
+include_once 'app/config.inc.php';
 
-if (!ControlSesion::sesion_iniciada()){
+if (!ControlSesion::sesion_iniciada()) {
     Redireccion :: redirigir(INDEX);
 }
 
@@ -19,19 +20,20 @@ $estado = RepoMaquina :: ObtenEstado(Conexion :: obtener_conexion());
 Conexion :: cerrar_conexion();
 
 if (isset($_POST['enviar'])) {
-    
-    Conexion :: abrir_conexion();
-    
-    $validador = new ValidadorAlta($_POST['introducemaquina'], $_POST['introducetaller'], $_POST['introducefecha'], $_POST['introducedescripcion'], $_POST['introduceestado']);
-    
-    if ($validador-> registro_valido()){
-        //echo "todo correcto";
-        $insert = new Tarea ('', $validador ->obtener_maquina(), $validador -> obtener_taller(), $validador -> obtener_terminado(), $validador-> obtener_fecha(), $validador-> obtener_descripcion());
-        $campo_insertado = RepoMaquina :: insertar_campo(Conexion :: obtener_conexion(), $insert );
-   
 
-        if ($campo_insertado){
+    Conexion :: abrir_conexion();
+
+    $validador = new ValidadorAlta($_POST['introducemaquina'], $_POST['introducetaller'], $_POST['introducefecha'], $_POST['introducedescripcion'], $_POST['introduceestado']);
+
+    if ($validador->registro_valido()) {
+        //echo "todo correcto";
+        $insert = new Tarea('', $validador->obtener_maquina(), $validador->obtener_taller(), $validador->obtener_terminado(), $validador->obtener_fecha(), $validador->obtener_descripcion());
+        $campo_insertado = RepoMaquina :: insertar_campo(Conexion :: obtener_conexion(), $insert);
+
+
+        if ($campo_insertado) {
             //redirigir
+            include_once 'plantillas/toast.inc.php';
         }
     }
     Conexion :: cerrar_conexion();
