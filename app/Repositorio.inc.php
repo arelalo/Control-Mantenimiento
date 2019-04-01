@@ -97,5 +97,31 @@ class RepoMaquina {
         }
         return $campo_insertado;
     }
+    
+    public static function leer_pendientes($conexion){
+        
+        $entradas = [];
+        if (isset($conexion)){
+            try {
+                $sql = "SELECT * FROM `control mantenimiento` WHERE `terminado` LIKE 'pendiente' ORDER BY `fecha` ASC ";
+                $sentencia = $conexion->prepare($sql);
+                $sentencia -> execute();
+                $resultado = $sentencia->fetchAll();
+                
+                if (count($resultado)){
+                    foreach ($resultado as $fila){
+                        $entradas = new Tarea(
+                                $fila['id'], $fila['maquina'], $fila['taller'], $fila['fecha'], $fila['descripcion'], $fila['terminado']
+                                );
+                    }
+                }
+                
+                
+            } catch (PDOException $ex) {
+                echo "error". $exc->getTraceAsString();
+                
+            }
+        }
+    }
 
 }
