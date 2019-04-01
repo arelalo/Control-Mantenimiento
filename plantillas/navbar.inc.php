@@ -18,9 +18,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Borrar </a>
             </li>
+            
+            
 
 
         </ul>
+          <li class="nav-item my-2 my-lg-0">
+                <a class="nav-link" href="app/logout.inc.php">Logout </a>
+            </li>
+        
 
     </div>
 
