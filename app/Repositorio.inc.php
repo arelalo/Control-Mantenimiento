@@ -103,17 +103,19 @@ class RepoMaquina {
         $entradas = [];
         if (isset($conexion)){
             try {
-                $sql = "SELECT * FROM `control mantenimiento` WHERE `terminado` LIKE 'pendiente' ORDER BY `fecha` ASC ";
-                $sentencia = $conexion->prepare($sql);
+                $sql = "SELECT * FROM `Control Mantenimiento`";
+                $sentencia = $conexion->query($sql);
                 $sentencia -> execute();
                 $resultado = $sentencia->fetchAll();
                 
                 if (count($resultado)){
                     foreach ($resultado as $fila){
-                        $entradas = new Tarea(
+                        $entradas [] = new Tarea(
                                 $fila['id'], $fila['maquina'], $fila['taller'], $fila['fecha'], $fila['descripcion'], $fila['terminado']
                                 );
+                       
                     }
+                   
                 }
                 
                 
@@ -121,7 +123,7 @@ class RepoMaquina {
                 echo "error". $exc->getTraceAsString();
                 
             }
-        }
-    }
+        } return $entradas;
+    } 
 
 }
