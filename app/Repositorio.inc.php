@@ -103,7 +103,7 @@ class RepoMaquina {
         $entradas = [];
         if (isset($conexion)){
             try {
-                $sql = "SELECT * FROM `Control Mantenimiento`";
+                $sql = "SELECT * FROM `control mantenimiento` WHERE `terminado` LIKE 'pendiente'";
                 $sentencia = $conexion->query($sql);
                 $sentencia -> execute();
                 $resultado = $sentencia->fetchAll();
@@ -111,7 +111,7 @@ class RepoMaquina {
                 if (count($resultado)){
                     foreach ($resultado as $fila){
                         $entradas [] = new Tarea(
-                                $fila['id'], $fila['maquina'], $fila['taller'], $fila['fecha'], $fila['descripcion'], $fila['terminado']
+                                $fila['id'], $fila['maquina'], $fila['taller'], $fila['terminado'], $fila['fecha'], $fila['descripcion']
                                 );
                        
                     }
