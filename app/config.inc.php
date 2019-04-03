@@ -1,17 +1,17 @@
 <?php
 
 //XAMMP
-define('NOMBRESERVIDOR', 'localhost');
-define('NOMBREUSUARIO', 'root');
-define('PASSWORD', '');
-define('NOMBREBD', 'Control Mantenimiento');
+//define('NOMBRESERVIDOR', 'localhost');
+//define('NOMBREUSUARIO', 'root');
+//define('PASSWORD', '');
+//define('NOMBREBD', 'Control Mantenimiento');
 
 
 //webhost
-//define('NOMBRESERVIDOR', 'localhost');
-//define ('NOMBREUSUARIO', 'id8956935_fromera');
-//define ('PASSWORD' , 'MimasFactoria2');
-//define ('NOMBREBD' , 'id8956935_control_mantenimiento');
+define('NOMBRESERVIDOR', 'localhost');
+define ('NOMBREUSUARIO', 'id8956935_fromera');
+define ('PASSWORD' , 'MimasFactoria2');
+define ('NOMBREBD' , 'id8956935_control_mantenimiento');
 
 //servidor xammp
 //define("SERVIDOR", "http://localhost/Control-Mantenimiento");
