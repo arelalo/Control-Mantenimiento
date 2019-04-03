@@ -1,7 +1,7 @@
 <?php
 
 //servidor xammp
-define("SERVIDOR", "http://localhost/Control-Mantenimiento");
+define("SERVIDOR", "http://localhost/Control Mantenimiento");
 
 //servidor webhost
 //define("SERVIDOR", "https://bdmantenimiento.000webhostapp.com");
