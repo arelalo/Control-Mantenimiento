@@ -28,13 +28,16 @@ class Escritor_Pendientes {
   echo $entrada -> getMaquina(). str_repeat ('&nbsp;', 60) .$entrada -> getTaller();
   ?>
   </h5>
-  <h5 class="card-header align-items-right">Fecha</h5>
+  <h5 class="card-header align-items-right"><?php echo $entrada -> getFecha(); ?></h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title"><?php echo $entrada -> getTerminado(); ?></h5>
+    <p class="card-text"><?php echo $entrada -> getDescripcion();?></p>
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>
+    -->
   </div>
+  
 </div>
+<br>
      <?php   
     }
 }
