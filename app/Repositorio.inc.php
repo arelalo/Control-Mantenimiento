@@ -103,7 +103,7 @@ class RepoMaquina {
         $entradas = [];
         if (isset($conexion)){
             try {
-                $sql = "SELECT * FROM `control mantenimiento` WHERE `terminado` LIKE 'pendiente'";
+                $sql = "SELECT * FROM `Control Mantenimiento` WHERE `Terminado` LIKE 'pendiente'";
                 $sentencia = $conexion->query($sql);
                 $sentencia -> execute();
                 $resultado = $sentencia->fetchAll();
@@ -120,7 +120,7 @@ class RepoMaquina {
                 
                 
             } catch (PDOException $ex) {
-                echo "error". $exc->getTraceAsString();
+                echo "error". $ex->getTraceAsString();
                 
             }
         } return $entradas;
