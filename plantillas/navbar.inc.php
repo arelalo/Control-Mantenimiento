@@ -16,10 +16,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="terminados.php">Terminados </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="crear.php">Crear </a>
-            </li>
-
+          
             <li class="nav-item">
                 <a class="nav-link" href="#">Borrar </a>
             </li>
