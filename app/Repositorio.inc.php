@@ -111,7 +111,35 @@ class RepoMaquina {
                 if (count($resultado)){
                     foreach ($resultado as $fila){
                         $entradas [] = new Tarea(
-                                $fila['id'], $fila['maquina'], $fila['taller'], $fila['terminado'], $fila['fecha'], $fila['descripcion']
+                                $fila['id'], $fila['Maquina'], $fila['Taller'], $fila['Terminado'], $fila['Fecha'], $fila['Descripcion']
+                                );
+                       
+                    }
+                   
+                }
+                
+                
+            } catch (PDOException $ex) {
+                echo "error". $ex->getTraceAsString();
+                
+            }
+        } return $entradas;
+    } 
+    
+       public static function leer_terminados($conexion){
+        
+        $entradas = [];
+        if (isset($conexion)){
+            try {
+                $sql = "SELECT * FROM `Control Mantenimiento` WHERE `Terminado` LIKE 'terminado'";
+                $sentencia = $conexion->query($sql);
+                $sentencia -> execute();
+                $resultado = $sentencia->fetchAll();
+                
+                if (count($resultado)){
+                    foreach ($resultado as $fila){
+                        $entradas [] = new Tarea(
+                                $fila['id'], $fila['Maquina'], $fila['Taller'], $fila['Terminado'], $fila['Fecha'], $fila['Descripcion']
                                 );
                        
                     }
