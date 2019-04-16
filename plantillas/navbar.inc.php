@@ -18,7 +18,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Busqueda </a>
+                <a class="nav-link" href="busqueda.php">Busqueda </a>
             </li>
 
 
