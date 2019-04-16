@@ -22,8 +22,9 @@ class Escritor {
             return;
         }
         ?>
-
-<div class="card">
+<div class="container">
+    <div class="row">
+<div class="card col-8">
   <h6 class="card-header"><?php 
   echo "Maquina: ".$entrada -> getMaquina();
   ?>
@@ -36,6 +37,13 @@ class Escritor {
     -->
   </div>
   
+</div>
+    <div class="btn-group col-4 h-50" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Editar</button>
+  <button type="button" class="btn btn-secondary">Borrar</button>
+</div>
+    </div>
+    
 </div>
 <br>
      <?php   
