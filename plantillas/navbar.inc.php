@@ -8,7 +8,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
             <li class="nav-item">
-                
+
                 <a class="nav-link" href="crear.php">Crear </a>
             </li>   
             <a class="nav-link" href="pendiente.php">Pendientes <span class="sr-only">(current)</span></a>
@@ -16,9 +16,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="terminados.php">Terminados </a>
             </li>
-          
+
             <li class="nav-item">
-                <a class="nav-link" href="#">Borrar </a>
+                <a class="nav-link" href="#">Busqueda </a>
             </li>
 
 
