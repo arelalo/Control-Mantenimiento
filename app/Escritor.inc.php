@@ -25,17 +25,9 @@ class Escritor {
 <div class="container">
     <div class="row">
 <div class="card col-8">
-  <h6 class="card-header"><?php 
-  echo "Maquina: ".$entrada -> getMaquina();
-  ?>
-  </h6>
-  <h6 class="card-header align-items-right"><?php echo "Taller: ".$entrada -> getTaller(); ?></h6>
-  <div class="card-body">
-    <h6 class="card-title"><?php echo $entrada -> getFecha(); ?></h6>
-    <p class="card-text"><?php echo $entrada -> getDescripcion();?></p>
-    <!--<a href="#" class="btn btn-primary">Go somewhere</a>
-    -->
-  </div>
+<?php 
+        include_once 'plantillas/tarjetadatos.inc.php';
+?>
   
 </div>
     <div class="btn-group col-4 h-50" role="group" aria-label="Basic example">
@@ -66,17 +58,9 @@ class Escritor {
         ?>
 
 <div class="card">
-  <h6 class="card-header"><?php 
-  echo "Maquina: ".$entrada -> getMaquina();
-  ?>
-  </h6>
-  <h6 class="card-header align-items-right"><?php echo "Taller: ".$entrada -> getTaller(); ?></h6>
-  <div class="card-body">
-    <h6 class="card-title"><?php echo $entrada -> getFecha(); ?></h6>
-    <p class="card-text"><?php echo $entrada -> getDescripcion();?></p>
-    <!--<a href="#" class="btn btn-primary">Go somewhere</a>
-    -->
-  </div>
+<?php 
+        include_once 'plantillas/tarjetadatos.inc.php';
+?>
   
 </div>
 <br>
