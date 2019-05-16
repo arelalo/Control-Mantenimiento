@@ -14,7 +14,7 @@ define('NOMBREBD', 'Control Mantenimiento');
 //define ('NOMBREBD' , 'id8956935_control_mantenimiento');
 
 //servidor xammp
-//define("SERVIDOR", "http://localhost/Control-Mantenimiento");
+//define("SERVIDOR", "http://localhost/Control Mantenimiento");
 
 //servidor webhost
 //define("SERVIDOR", "https://bdmantenimiento.000webhostapp.com");
